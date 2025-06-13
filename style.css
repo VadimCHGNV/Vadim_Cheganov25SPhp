@@ -1,0 +1,38 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #e9ecef;
+}
+header, footer {
+  background: #343a40;
+  color: white;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  margin-left: 15px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #dee2e6;
+  padding: 8px;
+}
+th {
+  background-color: #495057;
+  color: white;
+}
+form input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
+form button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+}
