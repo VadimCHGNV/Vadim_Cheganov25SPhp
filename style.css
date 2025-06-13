@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+header, footer {
+  background: #333;
+  color: white;
+  padding: 10px;
+}
+nav a {
+  color: white;
+  margin-left: 15px;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+th, td {
+  border: 1px solid #999;
+  padding: 8px;
+}
+form input {
+  margin-bottom: 10px;
+  padding: 5px;
+}
