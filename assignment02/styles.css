@@ -1,0 +1,275 @@
+/* creating :root{} to simplify styling */
+:root {
+    --apple-light: #f5f5f7;
+    --apple-dark: #1d1d1f;
+    --apple-gray: #86868b;
+    --apple-blue: #0071e3;
+    --apple-gradient: linear-gradient(135deg, #a2c0fd 0%, #c2e9fb 100%);
+    --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    --transition: all 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--apple-light);
+    color: var(--apple-dark);
+     line-height: 1.6;
+    min-height: 100vh;
+      display: grid;
+     grid-template-rows: auto 1fr auto;
+      background-image: var(--apple-gradient);
+    background-attachment: fixed;
+  }
+
+/* header Styles */
+header {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+     padding: 1.5rem 0;
+    text-align: center;
+ }
+
+header h1 {
+    font-weight: 600;
+    font-size: 1.8rem;
+     letter-spacing: -0.5px;
+      color: var(--apple-dark);
+ }
+
+/* main content grid */
+main.container {
+     display: grid;
+    gap: 2rem;
+    padding: 2rem 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* dashboard grid Layout */
+.dashboard-grid {
+    display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+/* product Card */
+.product-card {
+     background: rgba(255, 255, 255, 0.85);
+     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+     height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  }
+
+.product-img {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(245, 245, 247, 0.6);
+     padding: 1rem;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+ }
+
+.product-img img {
+    max-height: 100%;
+    max-width: 100%;
+     object-fit: contain;
+    border-radius: 6px;
+}
+
+.product-info {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-name {
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+     color: var(--apple-dark);
+}
+
+.product-description {
+    color: var(--apple-gray);
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.product-price {
+     font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--apple-dark);
+    margin-bottom: 1.2rem;
+}
+
+.card-actions {
+    display: flex;
+    gap: 0.8rem;
+    margin-top: auto;
+}
+
+/* form Styles */
+.card {
+     background: rgba(255, 255, 255, 0.85);
+     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 18px;
+    border: none;
+    box-shadow: var(--card-shadow);
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.form-label {
+     font-weight: 500;
+    color: var(--apple-dark);
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+     background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    transition: var(--transition);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: var(--apple-blue);
+    box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+     outline: none;
+}
+
+/* buttons */
+.btn {
+    border-radius: 50px;
+    padding: 0.7rem 1.8rem;
+     font-weight: 500;
+    letter-spacing: 0.2px;
+     transition: var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background: var(--apple-blue);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #0062c4;
+     transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 113, 227, 0.25);
+}
+
+.btn-secondary {
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--apple-dark);
+}
+
+.btn-secondary:hover {
+    background: rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+.btn-sm {
+    padding: 0.4rem 1rem;
+    font-size: 0.85rem;
+}
+
+/* Alert Messages */
+.alert {
+    border-radius: 14px;
+    padding: 1rem 1.5rem;
+     margin-bottom: 1.5rem;
+    border: none;
+    box-shadow: var(--card-shadow);
+}
+
+.alert-success {
+    background: rgba(210, 243, 218, 0.9);
+    color: #0f6848;
+}
+
+.alert-danger {
+    background: rgba(255, 221, 221, 0.9);
+    color: #7a1c1c;
+}
+
+/* Search Form */
+.search-form {
+    background: rgba(255, 255, 255, 0.7);
+     border-radius: 50px;
+    padding: 0.3rem;
+    box-shadow: var(--card-shadow);
+    max-width: 600px;
+}
+
+.search-form .form-control {
+     background: transparent;
+    border: none;
+    box-shadow: none !important;
+}
+
+/* footer */
+footer {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+     -webkit-backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    text-align: center;
+    color: var(--apple-gray);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* responsiveness */
+@media (max-width: 768px) {
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .product-img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-actions {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+}
